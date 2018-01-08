@@ -1,15 +1,17 @@
 #!/software/python/3.4/bin/python
+
+# Minidom parser is used to get data from Reuters news artciles in XML form
 from xml.dom import minidom
 import os
-os.chdir('/scratch1/rkandul/Reuters')
+os.chdir('/scratch1/rkandul/Reuters')  #path where XML file is present
 print(os.getcwd())
 fileCount = 0
 files = filter(os.path.isfile, os.listdir( os.curdir ) ) 
 for f in files:
  if f.endswith('.xml') and not f.endswith('.txt') and not f.endswith('build.xml'):
    
-    opFile= open("/scratch1/rkandul/resultFolderMar25/result"+str(fileCount)+".txt", "a")
-
+    opFile= open("/scratch1/rkandul/resultFolderMar25/result"+str(fileCount)+".txt", "a") 
+    #Using above line, file like result1.txt or result2.txt or result100.txt is open place the parsed data
          
     fileCount +=1    
     if  not f.endswith('.txt'):
