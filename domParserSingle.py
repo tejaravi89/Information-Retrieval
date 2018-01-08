@@ -11,7 +11,7 @@ for f in files:
  if f.endswith('.xml') and not f.endswith('.txt') and not f.endswith('build.xml'):
    
     opFile= open("/scratch1/rkandul/resultFolderMar25/result"+str(fileCount)+".txt", "a") 
-    #Using above line, file like result1.txt or result2.txt or result100.txt is open place the parsed data
+    #Using above line, file like result1.txt or result2.txt or result100.txt is opened to write the parsed data
          
     fileCount +=1    
     if  not f.endswith('.txt'):
