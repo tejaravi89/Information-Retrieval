@@ -1,4 +1,11 @@
 #!/usr/bin/python
+
+# Here binarySearch implies searching for two words with below conditions. 
+#Let us take two words united, states
+# united and states
+# united or states
+# united and not states
+
 import sys
 from sys import stdin
 numOfArgs = len(sys.argv)
@@ -11,7 +18,6 @@ else:
 NOTInQuery = False    
 if  numOfArgs == 5 and sys.argv[numOfArgs-2].lower() == "not":
  NOTInQuery = True
-#print (searchWord)
  
 def contains_word(sentence, word):
     return ('' + word.upper() + '') in ('' + sentence.upper() + '')
